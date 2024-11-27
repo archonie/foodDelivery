@@ -10,9 +10,9 @@ import UIKit
 class OnboardingViewController: UIViewController {
 
     private var slides = [
-        OnboardingSlide(title: "Quick Delivery at Your Doorstep", description: "Home delivery and Online reservation system for restaurants and cafes.", image: UIImage(named: "slide1")!),
-        OnboardingSlide(title: "Easy Payments", description: "Make payments easily with integrated systems.", image: UIImage(named:"slide2")!),
-        OnboardingSlide(title: "Track Your Orders", description: "Real-time tracking of your deliveries.", image: UIImage(named:"slide3")!)
+        OnboardingSlide(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: UIImage(named: "slide1")!),
+        OnboardingSlide(title: "World-Class Chefs", description: "Our dishes are prepared by only the best.", image: UIImage(named:"slide2")!),
+        OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: UIImage(named:"slide3")!)
     ]
     
     private let collectionView: UICollectionView = {
@@ -41,8 +41,20 @@ class OnboardingViewController: UIViewController {
         pageControl.pageIndicatorTintColor = .tertiaryLabel
         pageControl.numberOfPages = 3
         pageControl.currentPage = 0
+        pageControl.isUserInteractionEnabled = false
         return pageControl
     }()
+    
+    private var currentPage = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+            if currentPage == slides.count - 1 {
+                self.nextButton.setTitle("Get Started", for: .normal)
+            } else {
+                self.nextButton.setTitle("Next", for: .normal)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,19 +93,22 @@ class OnboardingViewController: UIViewController {
     }
     
     @objc private func didTapNext() {
-        let nextIndex = min(pageControl.currentPage + 1, slides.count - 1)
-        let indexPath = IndexPath(item: nextIndex, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        pageControl.currentPage = nextIndex
+        if currentPage == slides.count - 1 {
+            let controller = storyboard?.instantiateViewController(withIdentifier: "HomeNC") as! UINavigationController
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .flipHorizontal
+            present(controller, animated: true)
+        } else {
+            currentPage += 1
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
+        
     }
 
 }
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slides.count
@@ -101,7 +116,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OnboardingSlideViewCell.identifier, for: indexPath) as! OnboardingSlideViewCell
-        cell.configure(with: slides[indexPath.item])
+        cell.configure(with: slides[indexPath.row])
         return cell
     }
     
@@ -110,9 +125,10 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         return collectionView.bounds.size
     }
     
-    // Update page control on scroll
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(scrollView.contentOffset.x / scrollView.frame.width)
-        pageControl.currentPage = Int(pageIndex)
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        currentPage = Int(scrollView.contentOffset.x / width)
+       
     }
+     
 }
