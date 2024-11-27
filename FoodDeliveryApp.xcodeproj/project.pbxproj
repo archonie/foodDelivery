@@ -6,30 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		718212732CF785D600E0A8D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7182126A2CF785D600E0A8D9 /* Assets.xcassets */; };
+		718212752CF785D600E0A8D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7182126D2CF785D600E0A8D9 /* LaunchScreen.storyboard */; };
+		718212762CF785D600E0A8D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7182126F2CF785D600E0A8D9 /* Main.storyboard */; };
+		718212772CF785D600E0A8D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718212692CF785D600E0A8D9 /* AppDelegate.swift */; };
+		718212782CF785D600E0A8D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718212702CF785D600E0A8D9 /* SceneDelegate.swift */; };
+		7182127F2CF7861300E0A8D9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182127E2CF7861300E0A8D9 /* OnboardingViewController.swift */; };
+		7182132B2CF78B7D00E0A8D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182132A2CF78B7B00E0A8D9 /* Extensions.swift */; };
+		7182132D2CF78F5D00E0A8D9 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182132C2CF78F5D00E0A8D9 /* OnboardingSlide.swift */; };
+		718213302CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182132F2CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		71553B6C2CF7829A00A4BA37 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		718212692CF785D600E0A8D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7182126A2CF785D600E0A8D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7182126B2CF785D600E0A8D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7182126C2CF785D600E0A8D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7182126E2CF785D600E0A8D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		718212702CF785D600E0A8D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7182127E2CF7861300E0A8D9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7182132A2CF78B7B00E0A8D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7182132C2CF78F5D00E0A8D9 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		7182132F2CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		71553B7E2CF7829B00A4BA37 /* Exceptions for "FoodDeliveryApp" folder in "FoodDeliveryApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 71553B6B2CF7829A00A4BA37 /* FoodDeliveryApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		71553B6E2CF7829A00A4BA37 /* FoodDeliveryApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				71553B7E2CF7829B00A4BA37 /* Exceptions for "FoodDeliveryApp" folder in "FoodDeliveryApp" target */,
-			);
-			path = FoodDeliveryApp;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		71553B692CF7829A00A4BA37 /* Frameworks */ = {
@@ -45,7 +46,7 @@
 		71553B632CF7829A00A4BA37 = {
 			isa = PBXGroup;
 			children = (
-				71553B6E2CF7829A00A4BA37 /* FoodDeliveryApp */,
+				718212722CF785D600E0A8D9 /* FoodDeliveryApp */,
 				71553B6D2CF7829A00A4BA37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +57,71 @@
 				71553B6C2CF7829A00A4BA37 /* FoodDeliveryApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		718212722CF785D600E0A8D9 /* FoodDeliveryApp */ = {
+			isa = PBXGroup;
+			children = (
+				718213292CF78B7400E0A8D9 /* Resource */,
+				7182127C2CF785F700E0A8D9 /* CustomViews */,
+				7182127B2CF785E200E0A8D9 /* Views */,
+				7182127A2CF785D900E0A8D9 /* Models */,
+				718212692CF785D600E0A8D9 /* AppDelegate.swift */,
+				7182126A2CF785D600E0A8D9 /* Assets.xcassets */,
+				7182126B2CF785D600E0A8D9 /* Info.plist */,
+				7182126D2CF785D600E0A8D9 /* LaunchScreen.storyboard */,
+				7182126F2CF785D600E0A8D9 /* Main.storyboard */,
+				718212702CF785D600E0A8D9 /* SceneDelegate.swift */,
+			);
+			path = FoodDeliveryApp;
+			sourceTree = "<group>";
+		};
+		7182127A2CF785D900E0A8D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7182132C2CF78F5D00E0A8D9 /* OnboardingSlide.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7182127B2CF785E200E0A8D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7182127D2CF785FC00E0A8D9 /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7182127C2CF785F700E0A8D9 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7182127D2CF785FC00E0A8D9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7182132E2CF78FDE00E0A8D9 /* Cells */,
+				7182127E2CF7861300E0A8D9 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		718213292CF78B7400E0A8D9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7182132A2CF78B7B00E0A8D9 /* Extensions.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7182132E2CF78FDE00E0A8D9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7182132F2CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +138,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				71553B6E2CF7829A00A4BA37 /* FoodDeliveryApp */,
 			);
 			name = FoodDeliveryApp;
 			packageProductDependencies = (
@@ -122,6 +185,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718212732CF785D600E0A8D9 /* Assets.xcassets in Resources */,
+				718212752CF785D600E0A8D9 /* LaunchScreen.storyboard in Resources */,
+				718212762CF785D600E0A8D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +198,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7182132D2CF78F5D00E0A8D9 /* OnboardingSlide.swift in Sources */,
+				718212772CF785D600E0A8D9 /* AppDelegate.swift in Sources */,
+				718212782CF785D600E0A8D9 /* SceneDelegate.swift in Sources */,
+				718213302CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift in Sources */,
+				7182127F2CF7861300E0A8D9 /* OnboardingViewController.swift in Sources */,
+				7182132B2CF78B7D00E0A8D9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7182126D2CF785D600E0A8D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7182126C2CF785D600E0A8D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7182126F2CF785D600E0A8D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7182126E2CF785D600E0A8D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		71553B802CF7829B00A4BA37 /* Debug */ = {
