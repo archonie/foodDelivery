@@ -16,6 +16,9 @@
 		7182132B2CF78B7D00E0A8D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182132A2CF78B7B00E0A8D9 /* Extensions.swift */; };
 		7182132D2CF78F5D00E0A8D9 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182132C2CF78F5D00E0A8D9 /* OnboardingSlide.swift */; };
 		718213302CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182132F2CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift */; };
+		71C2DA2D2CF8B3F100366844 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2DA2C2CF8B3F100366844 /* HomeViewController.swift */; };
+		71C2DA322CF8B65100366844 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2DA312CF8B65100366844 /* HomeCollectionViewCell.swift */; };
+		71C2DA342CF8BA2D00366844 /* HomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2DA332CF8BA2B00366844 /* HomeCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		7182132A2CF78B7B00E0A8D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7182132C2CF78F5D00E0A8D9 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		7182132F2CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideViewCell.swift; sourceTree = "<group>"; };
+		71C2DA2C2CF8B3F100366844 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		71C2DA312CF8B65100366844 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		71C2DA332CF8BA2B00366844 /* HomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		718212722CF785D600E0A8D9 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				71C2DA2B2CF8B3BC00366844 /* Controllers */,
 				718213292CF78B7400E0A8D9 /* Resource */,
 				7182127C2CF785F700E0A8D9 /* CustomViews */,
 				7182127B2CF785E200E0A8D9 /* Views */,
@@ -79,6 +86,7 @@
 		7182127A2CF785D900E0A8D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				71C2DA332CF8BA2B00366844 /* HomeCard.swift */,
 				7182132C2CF78F5D00E0A8D9 /* OnboardingSlide.swift */,
 			);
 			path = Models;
@@ -87,6 +95,7 @@
 		7182127B2CF785E200E0A8D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				71C2DA2E2CF8B62B00366844 /* Home */,
 				7182127D2CF785FC00E0A8D9 /* Onboarding */,
 			);
 			path = Views;
@@ -103,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				7182132E2CF78FDE00E0A8D9 /* Cells */,
-				7182127E2CF7861300E0A8D9 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -120,6 +128,31 @@
 			isa = PBXGroup;
 			children = (
 				7182132F2CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		71C2DA2B2CF8B3BC00366844 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7182127E2CF7861300E0A8D9 /* OnboardingViewController.swift */,
+				71C2DA2C2CF8B3F100366844 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		71C2DA2E2CF8B62B00366844 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				71C2DA2F2CF8B63200366844 /* Cells */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		71C2DA2F2CF8B63200366844 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				71C2DA312CF8B65100366844 /* HomeCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -203,7 +236,10 @@
 				718212782CF785D600E0A8D9 /* SceneDelegate.swift in Sources */,
 				718213302CF78FF300E0A8D9 /* OnboardingSlideViewCell.swift in Sources */,
 				7182127F2CF7861300E0A8D9 /* OnboardingViewController.swift in Sources */,
+				71C2DA2D2CF8B3F100366844 /* HomeViewController.swift in Sources */,
+				71C2DA342CF8BA2D00366844 /* HomeCard.swift in Sources */,
 				7182132B2CF78B7D00E0A8D9 /* Extensions.swift in Sources */,
+				71C2DA322CF8B65100366844 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

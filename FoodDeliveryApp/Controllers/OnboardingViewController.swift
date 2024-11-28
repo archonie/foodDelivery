@@ -12,7 +12,8 @@ class OnboardingViewController: UIViewController {
     private var slides = [
         OnboardingSlide(title: "Delicious Dishes", description: "Experience a variety of amazing dishes from different cultures around the world.", image: UIImage(named: "slide1")!),
         OnboardingSlide(title: "World-Class Chefs", description: "Our dishes are prepared by only the best.", image: UIImage(named:"slide2")!),
-        OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: UIImage(named:"slide3")!)
+        OnboardingSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: UIImage(named:"slide3")!),
+         
     ]
     
     private let collectionView: UICollectionView = {
@@ -39,7 +40,6 @@ class OnboardingViewController: UIViewController {
         let pageControl = UIPageControl()
         pageControl.currentPageIndicatorTintColor = UIColor(named: "tintColor")
         pageControl.pageIndicatorTintColor = .tertiaryLabel
-        pageControl.numberOfPages = 3
         pageControl.currentPage = 0
         pageControl.isUserInteractionEnabled = false
         return pageControl
@@ -87,6 +87,7 @@ class OnboardingViewController: UIViewController {
         view.addSubview(collectionView)
         view.addSubview(nextButton)
         view.addSubview(pageControl)
+        pageControl.numberOfPages = slides.count
         collectionView.delegate = self
         collectionView.dataSource = self
         nextButton.addTarget(self, action: #selector(didTapNext), for: .touchUpInside)
