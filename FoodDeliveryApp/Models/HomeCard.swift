@@ -7,4 +7,5 @@
 
 struct HomeCard {
     let title: String
+    let categories: [DishCategory]
 }

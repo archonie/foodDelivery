@@ -29,3 +29,11 @@ extension UIView {
         return frame.origin.x + width
     }
 }
+
+extension String {
+    
+    var asUrl: URL? {
+        return URL(string: self)
+    }
+    
+}
